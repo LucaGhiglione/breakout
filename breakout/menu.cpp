@@ -24,11 +24,11 @@ void mainMenu(actualScreen& currentScreen)
 	{
 		currentScreen = actualScreen::instructions;
 	}
-	else if (slGetKey('1'))
+	else if (slGetKey('3'))
 	{
 		currentScreen = actualScreen::credits;
 	}
-	else if (slGetKey('1'))
+	else if (slGetKey('4'))
 	{
 		currentScreen = actualScreen::exit;
 	}
