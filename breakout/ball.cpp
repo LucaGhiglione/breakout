@@ -1,6 +1,8 @@
 #include "sl.h"
 #include "ball.h"
 
+
+//probar otro tamaño
 void startBall(Ball& ball)
 {
 	ball.x = 300;

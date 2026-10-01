@@ -9,7 +9,7 @@ struct Brick
     bool active;
 };
 
-
+//probar distintos numeros
 const int brickRow = 15;
 const int brickCol = 10;
 

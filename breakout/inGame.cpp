@@ -21,7 +21,7 @@ void collision(float& bricksAmount)
 			{
 				float brickHalfWidth = bricks[i][j].width / 2.0;
 				float brickHalfHeight = bricks[i][j].height / 2.0;
-
+				//aca tambien puede ser lo del bug, ademas cuando la pelota esta bajando (ball.speedY < 0), por alguna razon puede golpear un bloque sin hacer ball.speedy * -1... aunque pasa solo una vez
 				if (ball.x + ballHalf >= bricks[i][j].x - brickHalfWidth && ball.x - ballHalf <= bricks[i][j].x + brickHalfWidth && ball.y + ballHalf >= bricks[i][j].y - brickHalfHeight && ball.y - ballHalf <= bricks[i][j].y + brickHalfHeight)
 				{
 					bricks[i][j].active = false;

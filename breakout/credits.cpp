@@ -15,6 +15,9 @@ void credits(actualScreen& currentScreen)
 	slSetForeColor(1.0, 0, 0, 1.0);
 	slSetFontSize(26);
 	slText(300, 420, "Luca Ghiglione");
+	slText(300, 400, "Gemini ia");
+	slText(300, 380, "Me ayudo con los errores al separar archivos");
+	slText(300, 360, "Y que borrar para la entrega");
 
 	slSetForeColor(1.0, 0, 0, 1.0);
 	slSetFontSize(18);

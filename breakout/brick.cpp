@@ -16,6 +16,7 @@ void startBricks(Brick bricks[brickRow][brickCol])
 			bricks[i][j].width = brickWith;
 			bricks[i][j].height = brickHeight;
 			bricks[i][j].active = true;
+			//creo que el bug de las colisiones sale de aca, no se explicarlo
 			bricks[i][j].x = startX + (j * brickWith) - 1;
 			bricks[i][j].y = startY - (i * brickHeight) - 1;
 		}
