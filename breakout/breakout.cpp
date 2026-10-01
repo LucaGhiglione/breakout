@@ -2,6 +2,7 @@
 #include "sl.h"
 #include "gameScreen.h"
 #include "menu.h"
+#include "inGame.h"
 
 using namespace std;
 //ver como hago un boton de pausa
@@ -31,6 +32,7 @@ int main()
 		case actualScreen::gameplay:
 			//juego
 			cout << "GAMEPLAY" << endl;
+			inGame(currentScreen);
 			break;
 		case actualScreen::instructions:
 			//instruccionnes

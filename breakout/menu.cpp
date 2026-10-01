@@ -5,16 +5,16 @@ void mainMenu(actualScreen& currentScreen)
 {
 	//textos del menu
 	slSetTextAlign(SL_ALIGN_CENTER);
-	slSetForeColor(1.0, 1.0, 1.0, 1.0);
+	slSetForeColor(1.0, 0, 0, 1.0);
 	slSetFontSize(40);
-	slText(400, 600, "BREAKOUT");
+	slText(300, 600, "BREAKOUT");
 
 	//intentar hacer que se elija con las flechitas o con w y s, agregando un recuadro como selector
 	slSetFontSize(20);
-	slText(400, 500, "1.JUGAR");
-	slText(400, 400, "2.INSTRUCCIONES");
-	slText(400, 300, "3.CREDITOS");
-	slText(400, 200, "4.SALIR");
+	slText(300, 500, "1.JUGAR");
+	slText(300, 400, "2.INSTRUCCIONES");
+	slText(300, 300, "3.CREDITOS");
+	slText(300, 200, "4.SALIR");
 
 	if (slGetKey('1'))
 	{

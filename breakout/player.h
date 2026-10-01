@@ -4,7 +4,7 @@ struct Player
 {
 	float x;
 	float y;
-	float;width
+	float width;
 	float height;
 	float speed;
 	float points;
@@ -12,8 +12,8 @@ struct Player
 };
 
 
-void startPlayer(Player player);
+void startPlayer(Player& player);
 
-void playerInputs(Player player);
+void movePlayer(Player& player);
 
-void drawPlayer(const Player player);
+void drawPlayer(Player& player);

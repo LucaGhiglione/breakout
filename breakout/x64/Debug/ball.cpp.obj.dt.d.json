@@ -3,7 +3,10 @@
     "Data": {
         "Source": "c:\\users\\papog\\source\\repos\\breakout\\breakout\\ball.cpp",
         "ProvidedModule": "",
-        "Includes": [],
+        "Includes": [
+            "c:\\users\\papog\\source\\repos\\breakout\\breakout\\sigil\\include\\sl.h",
+            "c:\\users\\papog\\source\\repos\\breakout\\breakout\\ball.h"
+        ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
     }

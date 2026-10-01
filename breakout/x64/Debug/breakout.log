@@ -1,2 +1,4 @@
-﻿  menu.cpp
+﻿  ball.cpp
+C:\Users\papog\source\repos\breakout\breakout\ball.cpp(10,20): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\papog\source\repos\breakout\breakout\ball.cpp(11,20): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
   breakout.vcxproj -> C:\Users\papog\source\repos\breakout\x64\Debug\breakout.exe

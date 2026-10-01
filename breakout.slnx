@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="breakout/breakout.vcxproj" />
+  <Project Path="breakout/breakout.vcxproj" Id="75387815-887f-4948-ba97-783dbad5cd84" />
 </Solution>

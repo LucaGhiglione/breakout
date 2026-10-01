@@ -1,0 +1,16 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\papog\\source\\repos\\breakout\\breakout\\ingame.cpp",
+        "ProvidedModule": "",
+        "Includes": [
+            "c:\\users\\papog\\source\\repos\\breakout\\breakout\\sigil\\include\\sl.h",
+            "c:\\users\\papog\\source\\repos\\breakout\\breakout\\ball.h",
+            "c:\\users\\papog\\source\\repos\\breakout\\breakout\\player.h",
+            "c:\\users\\papog\\source\\repos\\breakout\\breakout\\gamescreen.h",
+            "c:\\users\\papog\\source\\repos\\breakout\\breakout\\ingame.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

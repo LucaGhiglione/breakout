@@ -148,6 +148,7 @@
     <ClCompile Include="ball.cpp" />
     <ClCompile Include="breakout.cpp" />
     <ClCompile Include="credits.cpp" />
+    <ClCompile Include="inGame.cpp" />
     <ClCompile Include="instructions.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="player.cpp" />
@@ -155,6 +156,7 @@
   <ItemGroup>
     <ClInclude Include="ball.h" />
     <ClInclude Include="gameScreen.h" />
+    <ClInclude Include="inGame.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="player.h" />
   </ItemGroup>
