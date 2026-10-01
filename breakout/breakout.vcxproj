@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClCompile Include="ball.cpp" />
     <ClCompile Include="breakout.cpp" />
+    <ClCompile Include="brick.cpp" />
     <ClCompile Include="credits.cpp" />
     <ClCompile Include="inGame.cpp" />
     <ClCompile Include="instructions.cpp" />
@@ -155,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ball.h" />
+    <ClInclude Include="brick.h" />
     <ClInclude Include="gameScreen.h" />
     <ClInclude Include="inGame.h" />
     <ClInclude Include="menu.h" />

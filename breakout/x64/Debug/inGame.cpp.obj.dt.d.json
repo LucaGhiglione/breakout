@@ -8,7 +8,8 @@
             "c:\\users\\papog\\source\\repos\\breakout\\breakout\\ball.h",
             "c:\\users\\papog\\source\\repos\\breakout\\breakout\\player.h",
             "c:\\users\\papog\\source\\repos\\breakout\\breakout\\gamescreen.h",
-            "c:\\users\\papog\\source\\repos\\breakout\\breakout\\ingame.h"
+            "c:\\users\\papog\\source\\repos\\breakout\\breakout\\ingame.h",
+            "c:\\users\\papog\\source\\repos\\breakout\\breakout\\brick.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

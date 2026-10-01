@@ -3,10 +3,11 @@
 #include "player.h"
 #include "gameScreen.h"
 #include "inGame.h"
-
+#include "brick.h"
 
 static Player player;
 static Ball ball;
+static Brick bricks[brickRow][brickCol];
 static bool inGameBool = false;
 
 void inGame(actualScreen& currentScreen)
@@ -15,6 +16,7 @@ void inGame(actualScreen& currentScreen)
 	{
 		startBall(ball);
 		startPlayer(player);
+		startBricks(bricks);
 		inGameBool = true;
 	}
 
@@ -23,7 +25,7 @@ void inGame(actualScreen& currentScreen)
 
 	drawBall(ball);
 	drawPlayer(player);
-
+	drawBricks(bricks);
 
 
 	if (slGetKey(SL_KEY_ESCAPE))
