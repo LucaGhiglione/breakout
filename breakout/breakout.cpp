@@ -18,11 +18,11 @@ int main()
 {
 	slWindow(600, 800, "BREAKOUT", false);
 	int font = slLoadFont("whiterabbit.ttf");
-	slSetFont(font, 24);
 	actualScreen currentScreen = actualScreen::menu;
 
 	while (!slShouldClose() && currentScreen != actualScreen::exit)
 	{
+		slSetFont(font, 24);
 		//pantallas, terminar de hacerlas
 		switch (currentScreen)
 		{
@@ -35,12 +35,19 @@ int main()
 			inGame(currentScreen);
 			break;
 		case actualScreen::instructions:
-			//instruccionnes
+			instructions(currentScreen);
 			cout << "instrucciones" << endl;
 			break;
 		case actualScreen::credits:
 			//creditos
+			credits(currentScreen);
 			cout << "creditos" << endl;
+			break;
+		case actualScreen::lose:
+			lose(currentScreen);
+			break;
+		case actualScreen::victory:
+			victory(currentScreen);
 			break;
 		case actualScreen::exit:
 			//salir

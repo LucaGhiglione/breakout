@@ -10,8 +10,8 @@ struct Brick
 };
 
 
-const int brickRow = 20;
-const int brickCol = 15;
+const int brickRow = 15;
+const int brickCol = 10;
 
 void startBricks(Brick bricks[brickRow][brickCol]);
 

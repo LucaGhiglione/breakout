@@ -2,3 +2,5 @@
 #include "gameScreen.h"
 
 void inGame(actualScreen& currentScreen);
+
+void collision();

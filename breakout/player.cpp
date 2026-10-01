@@ -7,7 +7,7 @@ void startPlayer(Player& player)
 	player.y = 100;
 	player.width = 150;
 	player.height = 25;
-	player.speed = 200 * slGetDeltaTime();
+	player.speed = 400 * slGetDeltaTime();
 }
 
 

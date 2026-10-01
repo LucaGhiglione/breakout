@@ -10,40 +10,34 @@ static Ball ball;
 static Brick bricks[brickRow][brickCol];
 static bool inGameBool = false;
 
-void inGame(actualScreen& currentScreen)
+void collision(float& bricksAmount)
 {
-	if (!inGameBool)
-	{
-		startBall(ball);
-		startPlayer(player);
-		startBricks(bricks);
-		inGameBool = true;
-	}
-
-	moveBall(ball);
-	movePlayer(player);
-
-
 	float ballHalf = ball.height / 2;
 	for (int i = 0; i < brickRow; i++)
 	{
 		for (int j = 0; j < brickCol; j++)
 		{
-			float brickHalfWidth = bricks[i][j].width / 2.0;
-			float brickHalfHeight = bricks[i][j].height / 2.0;
-
-			if (ball.x + ballHalf >= bricks[i][j].x - brickHalfWidth && ball.x - ballHalf <= bricks[i][j].x + brickHalfWidth && ball.y + ballHalf >= bricks[i][j].y - brickHalfHeight && ball.y - ballHalf <= bricks[i][j].y + brickHalfHeight)
+			if (bricks[i][j].active)
 			{
-				bricks[i][j].active = false;
-				if (ball.x < bricks[i][j].x - brickHalfWidth || ball.x > bricks[i][j].x + brickHalfWidth)
+				float brickHalfWidth = bricks[i][j].width / 2.0;
+				float brickHalfHeight = bricks[i][j].height / 2.0;
+
+				if (ball.x + ballHalf >= bricks[i][j].x - brickHalfWidth && ball.x - ballHalf <= bricks[i][j].x + brickHalfWidth && ball.y + ballHalf >= bricks[i][j].y - brickHalfHeight && ball.y - ballHalf <= bricks[i][j].y + brickHalfHeight)
 				{
-					ball.speedx *= -1;
-				}
-				else
-				{
-					ball.speedy *= -1;
+					bricks[i][j].active = false;
+					bricksAmount--;
+					if (ball.x < bricks[i][j].x - brickHalfWidth || ball.x > bricks[i][j].x + brickHalfWidth)
+					{
+						ball.speedx *= -1;
+					}
+					else
+					{
+						ball.speedy *= -1;
+					}
+					break;
 				}
 			}
+
 		}
 	}
 
@@ -53,12 +47,47 @@ void inGame(actualScreen& currentScreen)
 	if (ball.x + ballHalf >= player.x - playerHalfWidth &&
 		ball.x - ballHalf <= player.x + playerHalfWidth &&
 		ball.y - ballHalf <= player.y + playerHalfHeight &&
-		ball.y + ballHalf >= player.y - playerHalfHeight)
+		ball.y + ballHalf >= player.y - playerHalfHeight && ball.speedy < 0)
 	{
 		ball.speedy *= -1;
 	}
+}
 
-		drawBall(ball);
+void inGame(actualScreen& currentScreen)
+{
+
+	static float bricksAmount = 0;
+	if (!inGameBool)
+	{
+		startBall(ball);
+		startPlayer(player);
+		startBricks(bricks);
+		inGameBool = true;
+		bricksAmount = brickRow * brickCol;
+	}
+
+	moveBall(ball);
+	movePlayer(player);
+
+
+	collision(bricksAmount);
+
+	if (ball.y < 0)
+	{
+		inGameBool = false;
+		currentScreen = actualScreen::lose;
+	}
+
+
+	if (bricksAmount <= 0)
+	{
+		inGameBool = false;
+		currentScreen = actualScreen::victory;
+	}
+
+
+
+	drawBall(ball);
 	drawPlayer(player);
 	drawBricks(bricks);
 
@@ -69,4 +98,5 @@ void inGame(actualScreen& currentScreen)
 		currentScreen = actualScreen::menu;
 	}
 }
+
 

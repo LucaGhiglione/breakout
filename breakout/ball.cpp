@@ -7,8 +7,8 @@ void startBall(Ball& ball)
 	ball.y = 200;
 	ball.width = 25;
 	ball.height = 25;
-	ball.speedx = 100 * slGetDeltaTime();
-	ball.speedy = 100 * slGetDeltaTime();
+	ball.speedx = 300 * slGetDeltaTime();
+	ball.speedy = 300 * slGetDeltaTime();
 }
 
 

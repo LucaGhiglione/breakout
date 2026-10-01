@@ -97,8 +97,9 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
@@ -135,10 +136,11 @@
       <AdditionalIncludeDirectories>$(SolutionDir)breakout\sigil\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)breakout\sigil\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sigil.lib</AdditionalDependencies>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
@@ -151,8 +153,10 @@
     <ClCompile Include="credits.cpp" />
     <ClCompile Include="inGame.cpp" />
     <ClCompile Include="instructions.cpp" />
+    <ClCompile Include="lose.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="player.cpp" />
+    <ClCompile Include="victory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ball.h" />
