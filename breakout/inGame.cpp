@@ -23,7 +23,42 @@ void inGame(actualScreen& currentScreen)
 	moveBall(ball);
 	movePlayer(player);
 
-	drawBall(ball);
+
+	float ballHalf = ball.height / 2;
+	for (int i = 0; i < brickRow; i++)
+	{
+		for (int j = 0; j < brickCol; j++)
+		{
+			float brickHalfWidth = bricks[i][j].width / 2.0;
+			float brickHalfHeight = bricks[i][j].height / 2.0;
+
+			if (ball.x + ballHalf >= bricks[i][j].x - brickHalfWidth && ball.x - ballHalf <= bricks[i][j].x + brickHalfWidth && ball.y + ballHalf >= bricks[i][j].y - brickHalfHeight && ball.y - ballHalf <= bricks[i][j].y + brickHalfHeight)
+			{
+				bricks[i][j].active = false;
+				if (ball.x < bricks[i][j].x - brickHalfWidth || ball.x > bricks[i][j].x + brickHalfWidth)
+				{
+					ball.speedx *= -1;
+				}
+				else
+				{
+					ball.speedy *= -1;
+				}
+			}
+		}
+	}
+
+	float playerHalfWidth = player.width / 2;
+	float playerHalfHeight = player.height / 2;
+
+	if (ball.x + ballHalf >= player.x - playerHalfWidth &&
+		ball.x - ballHalf <= player.x + playerHalfWidth &&
+		ball.y - ballHalf <= player.y + playerHalfHeight &&
+		ball.y + ballHalf >= player.y - playerHalfHeight)
+	{
+		ball.speedy *= -1;
+	}
+
+		drawBall(ball);
 	drawPlayer(player);
 	drawBricks(bricks);
 

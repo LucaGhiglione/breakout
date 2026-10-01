@@ -5,7 +5,7 @@ void startBricks(Brick bricks[brickRow][brickCol])
 {
 	float brickWith = 600 / brickCol;
 	float brickHeight = 300 / brickRow;
-	float startX =0.005 + brickWith / 2;
+	float startX = 0 + brickWith / 2;
 	float startY = 750;
 
 
@@ -29,8 +29,11 @@ void drawBricks(const Brick bricks[brickRow][brickCol])
 	{
 		for (int j = 0; j < brickCol; j++)
 		{
+			if (bricks[i][j].active)
+			{
 			slSetForeColor(1.0, 0, 0, 1.0);
 			slRectangleOutline(bricks[i][j].x, bricks[i][j].y, bricks[i][j].width, bricks[i][j].height);
+			}
 		}
 
 	}

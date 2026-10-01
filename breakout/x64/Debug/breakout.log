@@ -1,3 +1,4 @@
-﻿  brick.cpp
-C:\Users\papog\source\repos\breakout\breakout\brick.cpp(8,15): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+﻿  inGame.cpp
+C:\Users\papog\source\repos\breakout\breakout\inGame.cpp(32,25): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\papog\source\repos\breakout\breakout\inGame.cpp(33,26): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
   breakout.vcxproj -> C:\Users\papog\source\repos\breakout\x64\Debug\breakout.exe
